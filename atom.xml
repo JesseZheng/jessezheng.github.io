@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>J.Z&#39;s BLOG</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-01-30T09:00:31.421Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jesse Zheng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>重庆森林</title>
+    <link href="http://yoursite.com/2018/01/30/%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97/"/>
+    <id>http://yoursite.com/2018/01/30/重庆森林/</id>
+    <published>2018-01-30T08:24:49.000Z</published>
+    <updated>2018-01-30T09:00:31.421Z</updated>
+    
+    <content type="html"><![CDATA[<p><em>“发胖的肥皂，流泪的毛巾 和30个凤梨罐头。”</em></p><img src="/2018/01/30/重庆森林/wangfei.jpg" class="[王靖雯]"><a id="more"></a><h2 id="人的一生啊"><a href="#人的一生啊" class="headerlink" title="人的一生啊"></a>人的一生啊</h2><p>人的一生就是无数经历 感谢那些让你拥有经历的人 无论经历是好是坏结果是悲是喜 它会是人生中最珍贵的东西 为什么很多时候一些作品映入眼帘却毫无头绪 想想其实道理很简单 缺少阅历 缺少经历 缺少积累 一旦你的大脑中有类似的记忆 作品往往触发这些记忆 所谓感同身受 这就是经历的宝贵之处 而它是不可能用物质或者任何东西去换 去买 所以啊 人越是成长越是要学会感恩 不光光是对那些帮助过你的人 还有那些带给你经历的人 </p><h2 id="人与人之间"><a href="#人与人之间" class="headerlink" title="人与人之间"></a>人与人之间</h2><p>我们每个人其实一直都在潜移默化地改变 没有改变永远都是相对而言罢了 这个世界 那些你身边的人 都是你自己化学反应的催化剂 而你也是他们的催化剂 人与人之间往往就是这样一个微妙的关系 如同王吉民老师说的 ‘恋爱的过程就是两个互相学习’  到最后往往对方都会慢慢变成自己的模样或者自己喜欢的样子 </p><h2 id="重庆的森林"><a href="#重庆的森林" class="headerlink" title="重庆的森林"></a>重庆的森林</h2><p>当然多愁善感没人能避免 发胖的肥皂和流泪的毛巾 30个凤梨罐头 人容易被感情驱使 这是人最有趣的特点了吧<br>重庆森林每个阶段都会产生每种感受 就像我上面说的 经历决定感受 情感产生经历 这就是人生 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;em&gt;“发胖的肥皂，流泪的毛巾 和30个凤梨罐头。”&lt;/em&gt;&lt;/p&gt;
+&lt;img src=&quot;/2018/01/30/重庆森林/wangfei.jpg&quot; class=&quot;[王靖雯]&quot;&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="电影" scheme="http://yoursite.com/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test_my_site</title>
+    <link href="http://yoursite.com/2018/01/30/test-my-site/"/>
+    <id>http://yoursite.com/2018/01/30/test-my-site/</id>
+    <published>2018-01-30T02:35:34.000Z</published>
+    <updated>2018-01-30T08:36:32.992Z</updated>
+    
+    <content type="html"><![CDATA[<p>继续测试继续测试</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;继续测试继续测试&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="测试分类" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/"/>
+    
+    
+      <category term="测试标签" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2018/01/30/hello-world/"/>
+    <id>http://yoursite.com/2018/01/30/hello-world/</id>
+    <published>2018-01-30T02:32:16.556Z</published>
+    <updated>2018-01-30T07:29:09.334Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
