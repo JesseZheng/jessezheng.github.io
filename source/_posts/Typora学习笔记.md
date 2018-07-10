@@ -1,5 +1,5 @@
 ---
-title: Typora学习笔记
+title: Typora-学习笔记
 date: 2018-01-30 20:44:40
 categories: 学习
 tags: 
