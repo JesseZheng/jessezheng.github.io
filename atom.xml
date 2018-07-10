@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>J.Z&#39;s BLOG</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2018-07-10T06:38:53.564Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Jesse Zheng</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac第一篇</title>
+    <link href="http://yoursite.com/2018/07/10/Mac%E7%AC%AC%E4%B8%80%E7%AF%87/"/>
+    <id>http://yoursite.com/2018/07/10/Mac第一篇/</id>
+    <published>2018-07-10T06:35:16.000Z</published>
+    <updated>2018-07-10T06:38:53.564Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>我很开心呢</strong></p></blockquote><p>测试一下行不行</p><a id="more"></a><p><u><strong><em>look more 好吗</em></strong></u></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;我很开心呢&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;测试一下行不行&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="学习" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title></title>
+    <link href="http://yoursite.com/2018/07/10/posts/"/>
+    <id>http://yoursite.com/2018/07/10/posts/</id>
+    <published>2018-07-10T06:33:50.316Z</published>
+    <updated>2018-07-10T06:33:50.316Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>5-21学习小结</title>
+    <link href="http://yoursite.com/2018/05/21/5-21%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/05/21/5-21学习小结/</id>
+    <published>2018-05-21T06:48:43.000Z</published>
+    <updated>2018-07-10T06:20:12.640Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>Normal equation</strong></p></blockquote><p>标准方程能够快速计算(在n相对较小的情况)出θ的值不需要迭代。</p><table><thead><tr><th>Gradient Descent</th><th>Normal Equation</th></tr></thead><tbody><tr><td>Need to choose alpha</td><td>No need to choose alpha</td></tr><tr><td>Needs many iterations</td><td>No need to iterate</td></tr><tr><td>O (kn^2)</td><td>O (n^3), need to calculate inverse of X^T*X</td></tr><tr><td>Works well when n is large</td><td>Slow if n is very large</td></tr></tbody></table> <a id="more"></a><p>In practice, when n exceeds 10,000 it might be a good time to go from a normal solution to an iterative process.</p><p>If X^T*X is  <u>noninvertible</u>, the common causes might be having :</p><ul><li>Redundant features, where two features are very closely related (i.e. they are linearly dependent)</li></ul><ul><li>Too many features (e.g. m ≤ n). In this case, delete some features or use “regularization” (to be explained in a later lesson).</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Normal equation&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;标准方程能够快速计算(在n相对较小的情况)出θ的值不需要迭代。&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;Gradient Descent&lt;/th&gt;
+&lt;th&gt;Normal Equation&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;Need to choose alpha&lt;/td&gt;
+&lt;td&gt;No need to choose alpha&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Needs many iterations&lt;/td&gt;
+&lt;td&gt;No need to iterate&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;O (kn^2)&lt;/td&gt;
+&lt;td&gt;O (n^3), need to calculate inverse of X^T*X&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;Works well when n is large&lt;/td&gt;
+&lt;td&gt;Slow if n is very large&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5-10学习小结</title>
+    <link href="http://yoursite.com/2018/05/10/5-10%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/05/10/5-10学习小结/</id>
+    <published>2018-05-10T14:35:27.000Z</published>
+    <updated>2018-07-10T06:20:12.631Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>Model Representation</strong></p></blockquote><img src="/2018/05/10/5-10学习小结/1.png" class="model"><p>监督算法模型，给予一个<strong>训练数据集</strong>到<strong>学习算法</strong>，然后得到一个<u>hypothesis(假设)</u>函数 – 输入X值后能预测相应的Y值</p><a id="more"></a><blockquote><p><strong>Cost function</strong></p></blockquote><img src="/2018/05/10/5-10学习小结/2.jpg" class="cost_function"><p>求出代价函数的最小值，对应的参数值就是假设函数的最佳参数。</p><img src="/2018/05/10/5-10学习小结/3.png" class="cost_function"><img src="/2018/05/10/5-10学习小结/4.jpg" class="cost_function"><img src="/2018/05/10/5-10学习小结/5.png" class="contour_plot" title="等高线图，越往中心的弧圈代表代价函数J 的值越小。"><p>等高线图，越往中心的弧圈代表代价函数J 的值越小。</p><blockquote><p><strong>Gradient descent algorithm</strong>(梯度下降算法)</p></blockquote><p><code>:=</code>表示赋值运算符</p><img src="/2018/05/10/5-10学习小结/change.png" class="Gradient descent algorithm" title="梯度下降算法原理"><p>如果系数偏大，导数为正数，系数会变小；反之，系数偏小，导数为负数，系数会变大。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Model Representation&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;img src=&quot;/2018/05/10/5-10学习小结/1.png&quot; class=&quot;model&quot;&gt;
+&lt;p&gt;监督算法模型，给予一个&lt;strong&gt;训练数据集&lt;/strong&gt;到&lt;strong&gt;学习算法&lt;/strong&gt;，然后得到一个&lt;u&gt;hypothesis(假设)&lt;/u&gt;函数 – 输入X值后能预测相应的Y值&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>5.2学习小结</title>
+    <link href="http://yoursite.com/2018/05/02/5-2%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/05/02/5-2学习小结/</id>
+    <published>2018-05-02T12:48:24.000Z</published>
+    <updated>2018-07-10T06:20:12.641Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p><strong>Supervised learning</strong></p></blockquote><ul><li>给algorithm一个data set in which <strong>“right answers” given</strong></li><li><u>Regression:</u> predict continuous valued output</li><li><u>Classification</u> = discrete valued output(0 or 1)</li></ul><blockquote><p><strong>Unsupervised learning</strong></p></blockquote><ul><li>just give algorithm a data set nothing else(no extra information)不知道数据集的意义</li><li>clustering algorithm 聚合算法</li><li>Cocktail party problem 鸡尾酒会算法</li><li><strong>Octave</strong><br><em><u>diabetes</u></em></li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Supervised learning&lt;/strong&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;给algorithm一个data set in which &lt;strong&gt;“right answers” given&lt;
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="python" scheme="http://yoursite.com/tags/python/"/>
+    
+      <category term="机器学习" scheme="http://yoursite.com/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Bachelor, Master and Doctor</title>
+    <link href="http://yoursite.com/2018/05/02/Bachelor-Master-and-Doctor/"/>
+    <id>http://yoursite.com/2018/05/02/Bachelor-Master-and-Doctor/</id>
+    <published>2018-05-02T11:41:23.000Z</published>
+    <updated>2018-07-10T06:20:12.642Z</updated>
+    
+    <content type="html"><![CDATA[<p><strong>BA</strong>: 文学学士学位（Bachelor of Arts）</p><p><strong>BBA</strong>: 工商业管理学士学位(Bachelor of Business Administration)</p><p><strong>BS</strong>: 理学学士学位(Bachelor of sciense)</p><p><strong>MA</strong>：文学硕士学位(Master of Arts)</p><p><strong>MS</strong>：理学硕士学位(Master of Sciense)</p><p><strong>MBA</strong>：工商管理硕士学位(Master of Business Administration)</p><p><strong>PhD</strong>：哲学博士学位，文理科均可。(Doctor of Philosophy)</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;strong&gt;BA&lt;/strong&gt;: 文学学士学位（Bachelor of Arts）&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;BBA&lt;/strong&gt;: 工商业管理学士学位(Bachelor of Business Administration)&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="学位" scheme="http://yoursite.com/tags/%E5%AD%A6%E4%BD%8D/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python简单爬虫爬取豆瓣影人照片</title>
+    <link href="http://yoursite.com/2018/03/18/python%E7%AE%80%E5%8D%95%E7%88%AC%E8%99%AB%E7%88%AC%E5%8F%96%E8%B1%86%E7%93%A3%E5%BD%B1%E4%BA%BA%E7%85%A7%E7%89%87/"/>
+    <id>http://yoursite.com/2018/03/18/python简单爬虫爬取豆瓣影人照片/</id>
+    <published>2018-03-18T10:17:08.000Z</published>
+    <updated>2018-07-10T06:20:12.643Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">from</span> bs4 <span class="keyword">import</span> BeautifulSoup</span><br><span class="line"><span class="keyword">import</span> requests, os, re</span><br><span class="line"><span class="keyword">from</span> urllib.parse <span class="keyword">import</span> urljoin</span><br><span class="line"></span><br><span class="line"><span class="comment"># 豆瓣图片爬虫</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SpiderMain</span><span class="params">(object)</span>:</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 获取该页面上单独图片页面的链接</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_get_new_urls</span><span class="params">(self, page_url, soup)</span>:</span></span><br><span class="line">        new_urls = set()</span><br><span class="line">        reg = <span class="string">r"https://movie.douban.com/celebrity/"</span> + page_url.split(<span class="string">'/'</span>)[<span class="number">4</span>] + <span class="string">r"/photo/\d+/$"</span>      <span class="comment">#正则表达式</span></span><br><span class="line">        links = soup.find_all(<span class="string">'a'</span>, href=re.compile(reg))</span><br><span class="line">        <span class="keyword">for</span> link <span class="keyword">in</span> links:</span><br><span class="line">            new_url = link[<span class="string">'href'</span>]</span><br><span class="line">            new_full_url = urljoin(page_url, new_url)</span><br><span class="line">            new_urls.add(new_full_url)</span><br><span class="line">        <span class="keyword">return</span> new_urls</span><br><span class="line"></span><br><span class="line">    <span class="comment">#获取该名人的姓名作为图片文件夹名</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">_get_name</span><span class="params">(self, root_url)</span>:</span></span><br><span class="line">        response = requests.get(root_url)</span><br><span class="line">        html_cont = response.content</span><br><span class="line">        soup = BeautifulSoup(html_cont, <span class="string">'html.parser'</span>)</span><br><span class="line">        name = soup.find(<span class="string">"div"</span>, attrs=&#123;<span class="string">"id"</span>:<span class="string">"content"</span>&#125;).h1.text.split()[<span class="number">0</span>]</span><br><span class="line">        <span class="keyword">return</span> name</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 爬图片开始喽</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">crawl</span><span class="params">(self, root_url)</span>:</span></span><br><span class="line">        dir_name = self._get_name(root_url)</span><br><span class="line">        dirIsExist = os.path.exists(os.getcwd() + <span class="string">r'\\douban\\%s'</span>%dir_name)       <span class="comment">#该文件夹是否存在</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> dirIsExist:</span><br><span class="line">            os.makedirs(os.getcwd() + <span class="string">r'\\douban\\%s'</span>%dir_name)         <span class="comment">#创建图片文件夹</span></span><br><span class="line">        os.chdir(os.path.join(os.getcwd(), <span class="string">r'douban\\%s'</span>%dir_name))     <span class="comment">#进入该文件夹</span></span><br><span class="line"></span><br><span class="line">        n = <span class="number">1</span>          <span class="comment">#图片数量</span></span><br><span class="line">        page = <span class="number">0</span>       <span class="comment">#图片页码</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span> page &lt; <span class="number">2</span>:</span><br><span class="line">            url_ = root_url + <span class="string">"photos/?start=%d"</span> % (page*<span class="number">40</span>)</span><br><span class="line"></span><br><span class="line">            html_cont = requests.get(url_).content</span><br><span class="line"></span><br><span class="line">            soup = BeautifulSoup(html_cont, <span class="string">'html.parser'</span>)</span><br><span class="line"></span><br><span class="line">            urls = self._get_new_urls(url_, soup)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">for</span> url <span class="keyword">in</span> urls:</span><br><span class="line">                pic_name = str(n) + <span class="string">'.jpg'</span></span><br><span class="line">                img_url = <span class="string">"https://img1.doubanio.com/view/photo/l/public/p"</span> + url.split(<span class="string">'/'</span>)[<span class="number">6</span>] + <span class="string">".jpg"</span></span><br><span class="line">                pic = requests.get(img_url)</span><br><span class="line">                <span class="keyword">with</span> open(pic_name, <span class="string">'wb'</span>) <span class="keyword">as</span> file:      <span class="comment">#open函数?</span></span><br><span class="line">                    file.write(pic.content)</span><br><span class="line">                    file.flush()</span><br><span class="line">                file.close()</span><br><span class="line">                print(<span class="string">"Crawl "</span> + str(n) + <span class="string">" : "</span> + img_url)</span><br><span class="line">                n += <span class="number">1</span></span><br><span class="line">            page += <span class="number">1</span></span><br><span class="line">        print(<span class="string">"Crawl succeed !"</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__==<span class="string">"__main__"</span>:</span><br><span class="line">    root_url = <span class="string">"https://movie.douban.com/celebrity/%d/"</span> % <span class="number">1274424</span>       <span class="comment">#只需修改该影人的豆瓣ID</span></span><br><span class="line">    obj_spider = SpiderMain()</span><br><span class="line">    obj_spider.crawl(root_url)</span><br></pre></td></tr></table></figure><hr>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span clas
+      
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="爬虫" scheme="http://yoursite.com/tags/%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>3.17学习小结</title>
+    <link href="http://yoursite.com/2018/03/17/post3-17%E5%AD%A6%E4%B9%A0%E5%B0%8F%E7%BB%93/"/>
+    <id>http://yoursite.com/2018/03/17/post3-17学习小结/</id>
+    <published>2018-03-17T15:16:38.000Z</published>
+    <updated>2018-07-10T06:20:12.643Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><h2 id="Anaconda是什么"><a href="#Anaconda是什么" class="headerlink" title="Anaconda是什么?"></a>Anaconda是什么?</h2></blockquote><p><em>简而言之就是<u>python</u>+<u>一堆用来数据处理的第三方包</u>+<u>python环境和这些包的管理器</u></em></p><p>1）Anaconda附带了一大批常用数据科学包，它附带了 conda、Python 和 150 多个科学包及其依赖项。因此你可以立即开始处理数据。</p><p>2）管理包<br>Anaconda 是在conda（一个包管理器和环境管理器）上发展出来的。<br>在数据分析中，你会用到很多第三方的包，而conda（包管理器）可以很好的帮助你在计算机上安装和管理这些包，包括安装、卸载和更新包。</p><p>3）管理环境<br>比如你在A项目中用了 Python2，而新的项目B老大要求使用Python 3，而同时安装两个Python版本可能会造成许多混乱和错误。这时候conda就可以帮助你为不同的项目建立不同的运行环境。</p><a id="more"></a><blockquote><h2 id="Conda命令关于管理环境"><a href="#Conda命令关于管理环境" class="headerlink" title="Conda命令关于管理环境"></a>Conda命令关于管理环境</h2></blockquote><p><strong>1）创建环境</strong></p><p>在终端中使用:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -nenv_name package_names</span><br></pre></td></tr></table></figure><p>上面的命令中，env_name是设置环境的名称（-n 是指该命令后面的env_name是你要创建环境的名称），package_names 是你要安装在创建环境中的包名称。</p><p><strong>2）创建环境时，可以指定要安装在环境中的 Python 版本</strong></p><p>当你同时使用 Python 2.x 和Python 3.x 中的代码时这很有用。要创建具有特定 Python 版本的环境，例如创建环境名称为py3，并安装最新版本的Python3在终端中输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n py3 python=3</span><br></pre></td></tr></table></figure><p>或也可以这样创建环境名称为py2，并安装最新版本的Python2：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n py2 python=2</span><br></pre></td></tr></table></figure><p>因为我做的项目不同，有时候会用到Python2，还有时候会用到Python3。所以我在自己的计算机上创建了这两个环境，并分别取了这样的环境名称：py2,py3。这样我可以根据不同的项目轻松使用不同版本的python。</p><p>如果你要安装特定版本（例如 Python3.6），请使用 </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n py python=3.6</span><br></pre></td></tr></table></figure><p><strong>3）进入和离开环境</strong></p><p>在 Windows 上，你可以使用activate my_env进入。在 OSX/Linux 上使用 <code>source activate my_env</code> 进入环境。</p><p>离开：</p><p>在 Windows 上，终端中输入： </p><p><code>deactivate</code></p><p>在 OSX/Linux 上 输入：</p><p><code>source deactivate</code></p><p><strong>4）列出环境</strong></p><p>我有时候会忘记自己创建的环境名称，这时候用<code>conda env list</code>就可以列出你创建的所有环境。</p><p>你会看到环境的列表，而且你当前所在环境的旁边会有一个星号*。默认的环境（即当你不在选定环境中时使用的环境）名为root。</p><p><strong>5）删除环境</strong></p><p>如果你不再使用某个环境，可以使用<code>conda env remove -n env_name</code>删除指定的环境（在这里环境名为 env_name）。</p><blockquote><h2 id="Conda关于包的管理"><a href="#Conda关于包的管理" class="headerlink" title="Conda关于包的管理"></a>Conda关于包的管理</h2></blockquote><p><strong>1）安装包</strong></p><p>在终端中键入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install package_name</span><br></pre></td></tr></table></figure><p>例如，要安装 pandas，在终端中输入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install pandas</span><br></pre></td></tr></table></figure><p>你还可以同时安装多个包。类似 <code>conda install pandas numpy</code>  的命令会同时安装所有这些包。还可以通过添加版本号（例如 conda install numpy=1.10）来指定所需的包版本。</p><p>conda 还会自动为你安装依赖项。例如，scipy 依赖于 numpy，因为它使用并需要 numpy。如果你只安装 scipy (conda install scipy)，则 conda 还会安装 numpy（如果尚未安装的话）。</p><p><strong>2）卸载包</strong></p><p>在终端中键入 ：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda remove package_names</span><br></pre></td></tr></table></figure><p>上面命令中的package_names是指你要卸载包的名称，例如你想卸载pandas包：<code>conda remove pandas</code></p><p><strong>3）更新包</strong></p><p>在终端中键入：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda update package_name</span><br></pre></td></tr></table></figure><p>如果想更新环境中的所有包（这样做常常很有用），使用：<code>conda update --all</code>。</p><p><strong>4）列出已安装的包</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">#列出已安装的包</span><br><span class="line">conda list</span><br></pre></td></tr></table></figure><p>如果不知道要找的包的确切名称，可以尝试使用 <code>conda search search_term</code> 进行搜索。例如，我知道我想安装numpy，但我不清楚确切的包名称。我可以这样尝试：<code>conda search num</code>。</p><blockquote><h2 id="python类中的普通方法，静态方法和类方法"><a href="#python类中的普通方法，静态方法和类方法" class="headerlink" title="python类中的普通方法，静态方法和类方法"></a>python类中的普通方法，静态方法和类方法</h2></blockquote><p><em>（装饰器<strong>@classmethod</strong> 和<strong>@staticmethod</strong>）</em></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span><span class="params">(object)</span>:</span></span><br><span class="line">    <span class="comment">#普通方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">foo</span><span class="params">(self,x)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"executing foo(%s,%s)"</span>%(self,x)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#类方法</span></span><br><span class="line"><span class="meta">    @classmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">class_foo</span><span class="params">(cls,x)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"executing class_foo(%s,%s)"</span>%(cls,x)</span><br><span class="line"></span><br><span class="line">    <span class="comment">#静态方法</span></span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">static_foo</span><span class="params">(x)</span>:</span></span><br><span class="line">        <span class="keyword">print</span> <span class="string">"executing static_foo(%s)"</span>%x</span><br><span class="line"></span><br><span class="line">a=A()</span><br></pre></td></tr></table></figure><p>下面是一个对象实体调用方法的常用方式.对象实体<code>a</code>被隐藏的传递给了第一个参数.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.foo(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># executing foo(&lt;__main__.A object at 0xb7dbef0c&gt;,1)</span></span><br></pre></td></tr></table></figure><p>用<strong>classmethods</strong>装饰,隐藏的传递给第一个参数的是对象实体的类(<code>class A</code>)而不是<code>self</code>(实例对象).</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">a.class_foo(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># executing class_foo(&lt;class '__main__.A'&gt;,1)</span></span><br></pre></td></tr></table></figure><p>你也可以用类调用<code>class_foo</code>.实际上,如果你把一些方法定义成<code>classmethod</code>,那么<u>实际上你是希望用类来调用这个方法</u>,而不是用这个类的实例来调用这个方法.<code>A.foo(1)</code>将会返回一个<code>TypeError</code>错误,<code>A.class_foo(1)</code>将会正常运行:</p><p>用<strong>staticmethods</strong>来装饰,不管传递给第一个参数的是<code>self</code>(对象实体)还是<code>cls</code>(类).它们的表现都一样:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">a.static_foo(<span class="number">1</span>)</span><br><span class="line"><span class="comment"># executing static_foo(1)</span></span><br><span class="line"></span><br><span class="line">A.static_foo(<span class="string">'hi'</span>)</span><br><span class="line"><span class="comment"># executing static_foo(hi)</span></span><br></pre></td></tr></table></figure><p><code>foo</code>只是个函数,但是当你调用<code>a.foo</code>的时候你得到的不仅仅是一个函数,你得到的是一个第一个参数绑定到<code>a</code>的”加强版”函数.<code>foo</code>需要两个参数,而<code>a.foo</code>仅仅需要一个参数.</p><p><code>a</code>绑定了<code>foo</code>.下面可以知道什么叫”绑定”了:</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(a.foo)</span><br><span class="line"><span class="comment"># &lt;bound method A.foo of &lt;__main__.A object at 0xb7d52f0c&gt;&gt;</span></span><br></pre></td></tr></table></figure><p>如果使用<code>a.class_foo</code>,是<code>A</code>(类)绑定到了<code>class_foo</code>而不是<code>a</code>(对象实体).</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(a.class_foo)</span><br><span class="line"><span class="comment"># &lt;bound method type.class_foo of &lt;class '__main__.A'&gt;&gt;</span></span><br></pre></td></tr></table></figure><p>最后剩下静态方法,说到底它就是一个方法.<code>a.static_foo</code>只是返回一个不带参数绑定的方法.<code>A.static_foo</code>和<code>a.static_foo</code>只需要一个参数.</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(a.static_foo)</span><br><span class="line"><span class="comment"># &lt;function static_foo at 0xb7d479cc&gt;</span></span><br></pre></td></tr></table></figure><p><strong>参考资料</strong></p><p><a href="https://conda.io/docs/user-guide/tasks/index.html" target="_blank" rel="noopener">conda官方命令文档</a></p><p><a href="https://www.zhihu.com/question/58033789" target="_blank" rel="noopener">初学python者自学anaconda的正确姿势是什么？？</a></p><p><a href="https://www.zhihu.com/question/20021164" target="_blank" rel="noopener">Python 中的 classmethod 和 staticmethod 有什么具体用途？ - 知乎</a></p><p><a href="https://taizilongxu.gitbooks.io/stackoverflow-about-python/content/14/README.html" target="_blank" rel="noopener">装饰器@staticmethod和@classmethod有什么区别_ _ Stackoverflow about Python</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;h2 id=&quot;Anaconda是什么&quot;&gt;&lt;a href=&quot;#Anaconda是什么&quot; class=&quot;headerlink&quot; title=&quot;Anaconda是什么?&quot;&gt;&lt;/a&gt;Anaconda是什么?&lt;/h2&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;简而言之就是&lt;u&gt;python&lt;/u&gt;+&lt;u&gt;一堆用来数据处理的第三方包&lt;/u&gt;+&lt;u&gt;python环境和这些包的管理器&lt;/u&gt;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;1）Anaconda附带了一大批常用数据科学包，它附带了 conda、Python 和 150 多个科学包及其依赖项。因此你可以立即开始处理数据。&lt;/p&gt;
+&lt;p&gt;2）管理包&lt;br&gt;Anaconda 是在conda（一个包管理器和环境管理器）上发展出来的。&lt;br&gt;在数据分析中，你会用到很多第三方的包，而conda（包管理器）可以很好的帮助你在计算机上安装和管理这些包，包括安装、卸载和更新包。&lt;/p&gt;
+&lt;p&gt;3）管理环境&lt;br&gt;比如你在A项目中用了 Python2，而新的项目B老大要求使用Python 3，而同时安装两个Python版本可能会造成许多混乱和错误。这时候conda就可以帮助你为不同的项目建立不同的运行环境。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Anaconda" scheme="http://yoursite.com/tags/Anaconda/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>演员的定义</title>
+    <link href="http://yoursite.com/2018/02/15/%E6%BC%94%E5%91%98%E7%9A%84%E5%AE%9A%E4%B9%89/"/>
+    <id>http://yoursite.com/2018/02/15/演员的定义/</id>
+    <published>2018-02-15T08:21:08.000Z</published>
+    <updated>2018-07-10T06:20:12.643Z</updated>
+    
+    <content type="html"><![CDATA[<p>花了些时间看完了<strong>今日影评·表演者言</strong>，节目分为10期，每期15分钟左右，节目发起人周迅（小迷弟）和一些老戏骨嘉宾一起来讲述他们对演员的理解和演员所需要的能力和品质。</p><p>节目虽短，但内容却十分充实。周迅和这些优秀的演员都能很真诚地描述他们的经历经验以及对演员的理解。他们作为过来人，很多东西都值得年轻演员学习和参考。</p><p>对于一名优秀的演员来说，TA需要拥有什么呢？</p><a id="more"></a><h3 id="体验生活"><a href="#体验生活" class="headerlink" title="体验生活"></a>体验生活</h3><p>最重要也是最根本的一点，作为一个演员，最好的表演往往是最真实的。</p><p>表演源自于生活，好的演员能呈献给观众生活中的点滴和细节。而这些细腻的东西都需要人从生活体验并积累。种种经历会不断丰富你的阅历，阅历会让表演充实和真实。所以说最好的表演也是无表演，它就像是生活中真真实实发生的事。</p><h3 id="观察生活"><a href="#观察生活" class="headerlink" title="观察生活"></a>观察生活</h3><p>身边的每一个人，每一件事都可以是电影中的一部分。而观察人物的一举一动和事件的发展过程，是提升演员自身对角色和故事理解的重要方法。因为作品中的每个角色往往都能在现实中找到类似的模板。</p><p>当你对演绎某个角色感到困惑的时候，现实生活往往会给你答案。察言观色是理解一个角色的必备技能。</p><h3 id="学习互补"><a href="#学习互补" class="headerlink" title="学习互补"></a>学习互补</h3><p>向优秀演员取经，吸收他们的优点，相互促进，提升自己。通过一部又一部的作品去学习每个方面，从导演角度从各个角度去审视作品。</p><h3 id="理性之中融入感性"><a href="#理性之中融入感性" class="headerlink" title="理性之中融入感性"></a>理性之中融入感性</h3><p>演员到头来还是要由理性主导的。在尊重作品，尊重人物的前提下加入演员的主观想法（自身理解）是角色演绎的最高境界。</p><p>感性至上带来的结果往往就是极端表现，角色的特征被演员自身特点代替或是角色形象是演员自己处理后模样。这会使角色带上个人情感色彩，可能不利于角色和作品本身。但也有一些情况是，在演员自身极具天赋的情况下，感性演绎会给角色附上一个独特色彩，让角色升华。这样的情况往往会出现在一些非科班出身的演员上。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;花了些时间看完了&lt;strong&gt;今日影评·表演者言&lt;/strong&gt;，节目分为10期，每期15分钟左右，节目发起人周迅（小迷弟）和一些老戏骨嘉宾一起来讲述他们对演员的理解和演员所需要的能力和品质。&lt;/p&gt;
+&lt;p&gt;节目虽短，但内容却十分充实。周迅和这些优秀的演员都能很真诚地描述他们的经历经验以及对演员的理解。他们作为过来人，很多东西都值得年轻演员学习和参考。&lt;/p&gt;
+&lt;p&gt;对于一名优秀的演员来说，TA需要拥有什么呢？&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="电影" scheme="http://yoursite.com/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>未来七日计划</title>
+    <link href="http://yoursite.com/2018/01/31/plan/"/>
+    <id>http://yoursite.com/2018/01/31/plan/</id>
+    <published>2018-01-31T03:55:34.000Z</published>
+    <updated>2018-07-10T06:20:12.642Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="计划flag"><a href="#计划flag" class="headerlink" title="计划flag"></a>计划flag</h2><p><u>写一点简单的hexo入门教程</u><br><a id="more"></a></p><ol><li><strong>hexo+github</strong>搭建个人博客入门（自己学习心得）</li><li>关于hexo的备份（在github上再创建一个备份<strong>branch</strong>，因为<code>hexo d</code> deploy上去的只是<em><u>网页的静态文件</u></em>不是hexo项目整个文件夹）</li><li>先这样吧</li></ol><hr><h3 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h3><p><a href="https://www.jianshu.com/p/baab04284923" target="_blank" rel="noopener">hexo备份</a></p><p><a href="https://www.zhihu.com/question/21193762/answer/79109280" target="_blank" rel="noopener">使用hexo，如果换了电脑怎么更新博客？ - CrazyMilk的回答 - 知乎</a></p><p><a href="http://blog.csdn.net/gdutxiaoxu/article/details/53576018" target="_blank" rel="noopener">手把手教你用Hexo+Github 搭建属于自己的博客</a></p><p><a href="https://zhuanlan.zhihu.com/p/26625249" target="_blank" rel="noopener">GitHub+Hexo 搭建个人网站详细教程</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;计划flag&quot;&gt;&lt;a href=&quot;#计划flag&quot; class=&quot;headerlink&quot; title=&quot;计划flag&quot;&gt;&lt;/a&gt;计划flag&lt;/h2&gt;&lt;p&gt;&lt;u&gt;写一点简单的hexo入门教程&lt;/u&gt;&lt;br&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Hexo" scheme="http://yoursite.com/tags/Hexo/"/>
+    
+      <category term="NexT" scheme="http://yoursite.com/tags/NexT/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Typora-学习笔记</title>
+    <link href="http://yoursite.com/2018/01/30/Typora%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2018/01/30/Typora学习笔记/</id>
+    <published>2018-01-30T12:44:40.000Z</published>
+    <updated>2018-07-10T06:20:12.642Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h2><p><em>斜体</em> <code>* *</code><br><strong>加粗</strong> <code>** **</code> 或者<code>__ __</code><br><u>下划线</u> <code>&lt;u&gt; &lt;/u&gt;</code><br><del>删除线</del> <code>~~ ~~</code><br>代码块<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello world!'</span>)</span><br></pre></td></tr></table></figure></p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(<span class="string">"Hello World!"</span>);</span><br></pre></td></tr></table></figure> <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">​<span class="code">```语言</span></span><br><span class="line"><span class="code"></span></span><br><span class="line"><span class="code">balabala</span></span><br></pre></td></tr></table></figure><a id="more"></a><h2 id="有序列表"><a href="#有序列表" class="headerlink" title="有序列表"></a>有序列表</h2><ol><li>一一 </li><li>二二 </li><li>三三 </li></ol><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">1. </span>11</span><br><span class="line"><span class="bullet">2. </span>22</span><br><span class="line"><span class="bullet">3. </span>33</span><br></pre></td></tr></table></figure><h2 id="无序列表"><a href="#无序列表" class="headerlink" title="无序列表"></a>无序列表</h2><ul><li>周</li><li>冬 </li><li>雨</li></ul><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">- </span>小</span><br><span class="line"><span class="bullet">- </span>黄</span><br><span class="line"><span class="bullet">- </span>鸭</span><br><span class="line">-,+,*皆可</span><br></pre></td></tr></table></figure><h2 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h2><p><a href="https://www.google.com" target="_blank" rel="noopener">这个是链接啊</a></p><p>&lt;<a href="http://www.baidu.com&gt;" target="_blank" rel="noopener">www.baidu.com&gt;</a></p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[<span class="string">word</span>](<span class="link">link</span>)</span><br><span class="line">&lt;link&gt;</span><br></pre></td></tr></table></figure><h2 id="引用"><a href="#引用" class="headerlink" title="引用"></a>引用</h2><blockquote><p>第一级引用</p><blockquote><p>第二级</p><blockquote><p>第三级</p></blockquote></blockquote></blockquote><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="quote">&gt; 1</span></span><br><span class="line"><span class="code">&gt; 2</span></span><br><span class="line"><span class="code">&gt; 3</span></span><br></pre></td></tr></table></figure><h2 id="居中"><a href="#居中" class="headerlink" title="居中"></a>居中</h2><center>居中了吗？</center><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;center&gt;居中了啦~&lt;/center&gt;</span><br></pre></td></tr></table></figure><h2 id="标注（Hexo不支持T-T）"><a href="#标注（Hexo不支持T-T）" class="headerlink" title="标注（Hexo不支持T_T）"></a>标注（Hexo不支持T_T）</h2><p>Example[^1]</p><p>[^1]: this is a note</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">某些人用过了才知道[^注释]</span><br><span class="line">[<span class="symbol">^注释</span>]:<span class="link">Somebody that I used to know.</span></span><br></pre></td></tr></table></figure><h2 id="表格"><a href="#表格" class="headerlink" title="表格"></a>表格</h2><table><thead><tr><th style="text-align:center">周</th><th style="text-align:center">冬</th><th style="text-align:center">雨</th></tr></thead><tbody><tr><td style="text-align:center">郑</td><td style="text-align:center">茅</td><td style="text-align:center">炜</td></tr><tr><td style="text-align:center">在</td><td style="text-align:center">一</td><td style="text-align:center">起</td></tr></tbody></table><p> 快捷键<code>Ctrl+T</code></p><h2 id="图片插入"><a href="#图片插入" class="headerlink" title="图片插入"></a>图片插入</h2><img src="/2018/01/30/Typora学习笔记/pic.jpg" class="图片ALT" title="图片介绍"><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![<span class="string">ALT</span>](<span class="link">image.jpg 图片介绍</span>)</span><br><span class="line">&#123;% asset_img 图片ALT pic.jpg 图片介绍 %&#125;</span><br></pre></td></tr></table></figure><h2 id="多选框（任务列表）"><a href="#多选框（任务列表）" class="headerlink" title="多选框（任务列表）"></a>多选框（任务列表）</h2><p>-[ ] 文字—–代表没有选中的复选框</p><p>-[x] 文字——代表选中的复选框</p><p>-[x] 数学</p><p>-[ ] 英语</p><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">-[空格]空格 文字—–代表没有选中的复选框</span><br><span class="line"></span><br><span class="line">-[x]空格 文字——代表选中的复选框</span><br><span class="line"></span><br><span class="line">-[x] 数学</span><br><span class="line"></span><br><span class="line">-[ ] 英语</span><br></pre></td></tr></table></figure><h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><p>加粗：<code>Ctrl+B</code></p><p>斜体：<code>Ctrl+I</code></p><p>字体：<code>Ctrl+数字</code></p><p>下划线：<code>Ctrl+U</code></p><p>返回开头：<code>Ctrl+Home</code></p><p>返回结尾：<code>Ctrl+End</code></p><p>生成表格：<code>Ctrl+T</code></p><p>创建链接：<code>Ctrl+K</code></p><hr><h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p><a href="http://blog.csdn.net/zhangruishi/article/details/70768923#%E9%93%BE%E6%8E%A5%E8%A1%A8%E7%A4%BA" target="_blank" rel="noopener">Typora学习笔记 - CSDN博客</a></p><p><a href="https://www.jianshu.com/p/82e730892d42" target="_blank" rel="noopener">Markdown的常用语法(个人总结) - 简书</a></p><p><a href="https://yanyinhong.github.io/2017/05/02/How-to-insert-image-in-hexo-post/" target="_blank" rel="noopener">Hexo博客搭建之在文章中插入图片</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;字体&quot;&gt;&lt;a href=&quot;#字体&quot; class=&quot;headerlink&quot; title=&quot;字体&quot;&gt;&lt;/a&gt;字体&lt;/h2&gt;&lt;p&gt;&lt;em&gt;斜体&lt;/em&gt; &lt;code&gt;* *&lt;/code&gt;&lt;br&gt;&lt;strong&gt;加粗&lt;/strong&gt; &lt;code&gt;** **&lt;/code&gt; 或者&lt;code&gt;__ __&lt;/code&gt;&lt;br&gt;&lt;u&gt;下划线&lt;/u&gt; &lt;code&gt;&amp;lt;u&amp;gt; &amp;lt;/u&amp;gt;&lt;/code&gt;&lt;br&gt;&lt;del&gt;删除线&lt;/del&gt; &lt;code&gt;~~ ~~&lt;/code&gt;&lt;br&gt;代码块&lt;br&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;print(&lt;span class=&quot;string&quot;&gt;&#39;hello world!&#39;&lt;/span&gt;)&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;System.out.println(&lt;span class=&quot;string&quot;&gt;&quot;Hello World!&quot;&lt;/span&gt;);&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+ &lt;figure class=&quot;highlight markdown&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;​&lt;span class=&quot;code&quot;&gt;```语言&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;code&quot;&gt;balabala&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="Typora" scheme="http://yoursite.com/tags/Typora/"/>
+    
+      <category term="Markdown" scheme="http://yoursite.com/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>重庆森林</title>
+    <link href="http://yoursite.com/2018/01/30/%E9%87%8D%E5%BA%86%E6%A3%AE%E6%9E%97/"/>
+    <id>http://yoursite.com/2018/01/30/重庆森林/</id>
+    <published>2018-01-30T08:24:49.000Z</published>
+    <updated>2018-07-10T06:11:00.282Z</updated>
+    
+    <content type="html"><![CDATA[<p>​    <em>“发胖的肥皂，流泪的毛巾 和30个凤梨罐头。”</em></p><img src="/2018/01/30/重庆森林/wangfei.jpg" class="[王靖雯]"><a id="more"></a><h2 id="人的一生啊"><a href="#人的一生啊" class="headerlink" title="人的一生啊"></a>人的一生啊</h2><p>人的一生就是无数经历 感谢那些让你拥有经历的人 无论经历是好是坏结果是悲是喜 它会是人生中最珍贵的东西 为什么很多时候一些作品映入眼帘却毫无头绪 想想其实道理很简单 缺少阅历 缺少经历 缺少积累 一旦你的大脑中有类似的记忆 作品往往触发这些记忆 所谓感同身受 这就是经历的宝贵之处 而它是不可能用物质或者任何东西去换 去买 所以啊 人越是成长越是要学会感恩 不光光是对那些帮助过你的人 还有那些带给你经历的人 </p><h2 id="人与人之间"><a href="#人与人之间" class="headerlink" title="人与人之间"></a>人与人之间</h2><p>我们每个人其实一直都在潜移默化地改变 没有改变永远都是相对而言罢了 这个世界 那些你身边的人 都是你自己化学反应的催化剂 而你也是他们的催化剂 人与人之间往往就是这样一个微妙的关系 如同王吉民老师说的 ‘恋爱的过程就是两个互相学习’  到最后往往对方都会慢慢变成自己的模样或者自己喜欢的样子 </p><h2 id="重庆的森林"><a href="#重庆的森林" class="headerlink" title="重庆的森林"></a>重庆的森林</h2><p>当然多愁善感没人能避免 发胖的肥皂和流泪的毛巾 30个凤梨罐头 人容易被感情驱使 这是人最有趣的特点了吧<br>重庆森林每个阶段都会产生每种感受 就像我上面说的 经历决定感受 情感产生经历 这就是人生 </p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;​    &lt;em&gt;“发胖的肥皂，流泪的毛巾 和30个凤梨罐头。”&lt;/em&gt;&lt;/p&gt;
+&lt;img src=&quot;/2018/01/30/重庆森林/wangfei.jpg&quot; class=&quot;[王靖雯]&quot;&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="http://yoursite.com/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="电影" scheme="http://yoursite.com/tags/%E7%94%B5%E5%BD%B1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test_my_site</title>
+    <link href="http://yoursite.com/2018/01/30/test-my-site/"/>
+    <id>http://yoursite.com/2018/01/30/test-my-site/</id>
+    <published>2018-01-30T02:35:34.000Z</published>
+    <updated>2018-07-10T06:11:00.282Z</updated>
+    
+    <content type="html"><![CDATA[<p>继续测试继续测试</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;继续测试继续测试&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="测试分类" scheme="http://yoursite.com/categories/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/"/>
+    
+    
+      <category term="测试标签" scheme="http://yoursite.com/tags/%E6%B5%8B%E8%AF%95%E6%A0%87%E7%AD%BE/"/>
+    
+  </entry>
+  
+</feed>
