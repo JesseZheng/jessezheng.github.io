@@ -94,7 +94,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="python,算法," />
 
 
 
@@ -107,16 +107,18 @@
 
 
 
-<meta name="description" content="Passion makes perfect.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="J.Z&#39;s BLOG">
-<meta property="og:url" content="http://yoursite.com/tags/Markdown/index.html">
+<meta name="description" content="There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). You may assume nums1 and num">
+<meta name="keywords" content="python,算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="leetcode-4.Median of Two Sorted Arrays">
+<meta property="og:url" content="http://yoursite.com/2018/08/10/leetcode-4-Median-of-Two-Sorted-Arrays/index.html">
 <meta property="og:site_name" content="J.Z&#39;s BLOG">
-<meta property="og:description" content="Passion makes perfect.">
+<meta property="og:description" content="There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). You may assume nums1 and num">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-08-10T10:58:33.908Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="J.Z&#39;s BLOG">
-<meta name="twitter:description" content="Passion makes perfect.">
+<meta name="twitter:title" content="leetcode-4.Median of Two Sorted Arrays">
+<meta name="twitter:description" content="There are two sorted arrays nums1 and nums2 of size m and n respectively. Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)). You may assume nums1 and num">
 
 
 
@@ -146,13 +148,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/tags/Markdown/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/08/10/leetcode-4-Median-of-Two-Sorted-Arrays/"/>
 
 
 
 
 
-  <title>标签: Markdown | J.Z's BLOG</title>
+  <title>leetcode-4.Median of Two Sorted Arrays | J.Z's BLOG</title>
   
 
 
@@ -171,7 +173,7 @@
     
   
 
-  <div class="container sidebar-position-left ">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -308,54 +310,189 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h1>Markdown<small>标签</small>
-        </h1>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/08/10/leetcode-4-Median-of-Two-Sorted-Arrays/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jesse Zheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="J.Z's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/01/30/Typora学习笔记/" itemprop="url">
-              
-                <span itemprop="name">Typora-学习笔记</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">leetcode-4.Median of Two Sorted Arrays</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-01-30T20:44:40+08:00"
-              content="2018-01-30" >
-          01-30
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-08-10T16:47:15+08:00">
+                2018-08-10
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/leetcode/" itemprop="url" rel="index">
+                    <span itemprop="name">leetcode</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>There are two sorted arrays <strong>nums1</strong> and <strong>nums2</strong> of size m and n respectively.</p>
+<p>Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).</p>
+<p>You may assume <strong>nums1</strong> and <strong>nums2</strong> cannot be both empty.</p>
+<a id="more"></a>
+<h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>题目是让我们求两个数组的中位数，如果没有时间复杂度限制条件的话，最简单好理解的方法是：把两个数组merge成一个sorted array，然后判断数组的长度的奇偶后直接可以得出中位数。</p>
+<p>不过题目设置了时间复杂度O(log(m+n))，m和n分别是两个数组的长度。因此题目变得复杂了，这边我主要介绍一种我认为相对好理解的解法。</p>
+<p><strong>该方法的核心是将原问题转变成一个寻找第k小数的问题（假设两个原序列升序排列），这样中位数实际上是第(m+n)/2小的数。所以只要解决了第k小数的问题，原问题也得以解决。</strong></p>
+<p>首先假设数组A和B的元素个数都大于k/2，我们比较A[k/2-1]和B[k/2-1]两个元素，这两个元素分别表示A的第k/2小的元素和B的第k/2小的元素。这两个元素比较共有三种情况：&gt;、&lt;和=。</p>
+<p>如果A[k/2-1]&lt;B[k/2-1]，这表示A[0]到A[k/2-1]的元素都在A和B合并之后的前k小的元素中。换句话说，A[k/2-1]不可能大于两数组合并之后的第k小值，所以我们可以将其抛弃。</p>
+<p>当A[k/2-1]&gt;B[k/2-1]时存在类似的结论。</p>
+<p>当A[k/2-1]=B[k/2-1]时，我们已经找到了第k小的数，也即这个相等的元素，我们将其记为m。由于在A和B中分别有k/2-1个元素小于m，所以m即是第k小的数。(这里可能有人会有疑问，如果k为奇数，则m不是中位数。这里是进行了理想化考虑，在实际代码中略有不同，是先求k/2，然后利用k-k/2获得另一个数。)</p>
+<p>通过上面的分析，我们即可以采用递归的方式实现寻找第k小的数。此外我们还需要考虑几个边界条件：</p>
+<ul>
+<li>如果A或者B为空，则直接返回B[k-1]或者A[k-1]；</li>
+<li>如果k为1，我们只需要返回A[0]和B[0]中的较小值；</li>
+<li>如果A[k/2-1]=B[k/2-1]，返回其中一个；</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">findKth</span><span class="params">(nums1, m, nums2, n, k)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> m&gt;n:</span><br><span class="line">        <span class="keyword">return</span> findKth(nums2, n, nums1, m, k)</span><br><span class="line">    <span class="keyword">if</span> m==<span class="number">0</span>:</span><br><span class="line">        <span class="keyword">return</span> nums2[k<span class="number">-1</span>]</span><br><span class="line">    <span class="keyword">if</span> k==<span class="number">1</span>:</span><br><span class="line">        <span class="keyword">return</span> min(nums1[<span class="number">0</span>], nums2[<span class="number">0</span>])</span><br><span class="line">    pa = min(k//<span class="number">2</span>, m)</span><br><span class="line">    pb = k - pa</span><br><span class="line">    <span class="keyword">if</span> nums1[pa<span class="number">-1</span>]&lt;nums2[pb<span class="number">-1</span>]:</span><br><span class="line">        <span class="keyword">return</span> findKth(nums1[pa:], m-pa, nums2, n, k-pa)</span><br><span class="line">    <span class="keyword">elif</span> nums1[pa<span class="number">-1</span>]&gt;nums2[pb<span class="number">-1</span>]:</span><br><span class="line">        <span class="keyword">return</span> findKth(nums1, m, nums2[pb:], n-pb, k-pb)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> nums1[pa<span class="number">-1</span>]</span><br><span class="line">    </span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">findMedianSortedArrays</span><span class="params">(nums1, nums2)</span>:</span></span><br><span class="line">        <span class="string">"""</span></span><br><span class="line"><span class="string">        :type nums1: List[int]</span></span><br><span class="line"><span class="string">        :type nums2: List[int]</span></span><br><span class="line"><span class="string">        :rtype: float</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        m = len(nums1)</span><br><span class="line">        n = len(nums2)</span><br><span class="line">        k = (m+n)//<span class="number">2</span></span><br><span class="line">        <span class="keyword">if</span> (m+n)%<span class="number">2</span> == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">return</span> (findKth(nums1, m, nums2, n, k)+findKth(nums1, m, nums2, n, k+<span class="number">1</span>))/<span class="number">2</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> findKth(nums1, m, nums2, n, k+<span class="number">1</span>)</span><br></pre></td></tr></table></figure>
+<p>参考资料：<a href="https://blog.csdn.net/yutianzuijin/article/details/11499917" target="_blank" rel="noopener">leetcode之 median of two sorted arrays - CSDN博客</a></p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/python/" rel="tag"># python</a>
+          
+            <a href="/tags/算法/" rel="tag"># 算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/17/理解RESTful架构/" rel="next" title="理解RESTful架构">
+                <i class="fa fa-chevron-left"></i> 理解RESTful架构
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -363,6 +500,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -383,8 +524,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -482,6 +632,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#思路"><span class="nav-number">1.</span> <span class="nav-text">思路</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -635,6 +801,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
