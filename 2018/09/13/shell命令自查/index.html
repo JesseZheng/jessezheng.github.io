@@ -1,0 +1,1303 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Galdeano:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="shell," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="J.Z's BLOG" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq">
+<meta name="keywords" content="shell">
+<meta property="og:type" content="article">
+<meta property="og:title" content="shell命令自查">
+<meta property="og:url" content="http://yoursite.com/2018/09/13/shell命令自查/index.html">
+<meta property="og:site_name" content="J.Z&#39;s BLOG">
+<meta property="og:description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-09-13T18:42:29.295Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="shell命令自查">
+<meta name="twitter:description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2018/09/13/shell命令自查/"/>
+
+
+
+
+
+  <title>shell命令自查 | J.Z's BLOG</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">J.Z's BLOG</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/09/13/shell命令自查/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Jesse Zheng">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/head.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="J.Z's BLOG">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">shell命令自查</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-09-13T15:06:04+02:00">
+                2018-09-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/学习/" itemprop="url" rel="index">
+                    <span itemprop="name">学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>getopts</li>
+<li>grep &amp;&amp; egrep</li>
+<li>$读取命令行参数</li>
+<li>chmod</li>
+<li>sort</li>
+<li>uniq</li>
+</ul>
+<a id="more"></a>
+<blockquote>
+<h3 id="getopts"><a href="#getopts" class="headerlink" title="getopts"></a>getopts</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#!/bin/bash</span></span><br><span class="line"> </span><br><span class="line"><span class="keyword">while</span> <span class="built_in">getopts</span> <span class="string">"a:b:cdef"</span> opt; <span class="keyword">do</span></span><br><span class="line">  <span class="keyword">case</span> <span class="variable">$opt</span> <span class="keyword">in</span></span><br><span class="line">    a)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"this is -a the arg is ! <span class="variable">$OPTARG</span>"</span> </span><br><span class="line">      ;;</span><br><span class="line">    b)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"this is -b the arg is ! <span class="variable">$OPTARG</span>"</span> </span><br><span class="line">      ;;</span><br><span class="line">    c)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"this is -c the arg is ! <span class="variable">$OPTARG</span>"</span> </span><br><span class="line">      ;;</span><br><span class="line">    \?)</span><br><span class="line">      <span class="built_in">echo</span> <span class="string">"Invalid option: -<span class="variable">$OPTARG</span>"</span> </span><br><span class="line">      ;;</span><br><span class="line">  <span class="keyword">esac</span></span><br></pre></td></tr></table></figure>
+<p>getopts的使用形式是：<code>getopts option_string variable</code></p>
+<p>getopts一共有两个参数，<code>test.sh -a hello</code>第一个是<code>-a</code>这样的选项，第二个参数是 <code>hello</code>这样的参数。</p>
+<p>option_string之间可以直接相连，把<code>:</code>加在某个选项后面表示这个选项必须带有参数</p>
+<p> 例如：<code>getopts ahfvc: option</code>表明选项a、h、f、v可以不加实际值进行传递，而选项c必须取值。使用选项取值时，必须使用变量<strong>OPTARG</strong>保存该值。</p>
+<blockquote>
+<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3></blockquote>
+<p> <strong>grep命令使用正则表达式来搜索文本，并且把匹配的文本打印出来</strong>。</p>
+<p>grep [options]pattern [file]</p>
+<p>option表示选项，pattern表示匹配的模式。file表示一系列文件名。</p>
+<p>常用选项：</p>
+<p>-c  只打印匹配的文本行的函数，不显示文本内容。</p>
+<p>-i   匹配时忽略字母大小写</p>
+<p>-h  当搜索多个文件，不显示匹配文件名前缀。</p>
+<p>-l   只列出含义匹配的文本行的文件的文件名，不显示其具体匹配的内容。</p>
+<p>-n  列出所有匹配的文本行，并显示行号</p>
+<p>-s   不显示关于不存在或无法读取文件的错误信息</p>
+<p>-v   只显示不匹配的文本行。</p>
+<p>-w  匹配整个单词</p>
+<p>-x   匹配整个文本行</p>
+<p>-r   递归搜索，不仅搜索当前目录，还有各级子目录</p>
+<p><strong>-q   用于if逻辑判断</strong></p>
+<p>-q 参数，本意是 Quiet; do not write anything to standard output.  Exit immediately with zero status if any match is found, even if an error was detected.   中文意思为，安静模式，不打印任何标准输出。如果有匹配的内容则立即返回状态值0。</p>
+<p><strong><u>正则表达式</u></strong></p>
+<p><strong>1）行首定位符 “^”</strong></p>
+<p>用来匹配行首的字符。表示行首的字符是^后面的那个字符。</p>
+<p>行首定位符位于所作用的字符之前</p>
+<p>例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列出/etc目录中的以字母po开头的文件名</span></span><br><span class="line">str=`ls /etc | grep <span class="string">"^po"</span>`</span><br><span class="line"><span class="built_in">echo</span><span class="string">"<span class="variable">$str</span>"</span></span><br></pre></td></tr></table></figure>
+<p> <strong>2）行尾定位符”$”</strong></p>
+<p>作用：定位文本行的末尾。</p>
+<p>行尾定位符位于所作用的字符之后。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#列出/etc目录中以conf结尾的文件名</span></span><br><span class="line">str=`ls /etc | grep <span class="string">"conf$"</span>`</span><br><span class="line"><span class="built_in">echo</span><span class="string">"<span class="variable">$str</span>"</span></span><br></pre></td></tr></table></figure>
+<p>精确匹配一个文本行：<code>^cat$</code> 完全匹配cat的文本行</p>
+<p><code>^$</code>:匹配所有空行</p>
+<p>单独的^和$没有任何意义，因为任何一个文本行都有开头和结尾。</p>
+<p> <strong>3）单个字符匹配”.”</strong></p>
+<p>圆点<code>.</code>用来匹配任意单个字符。包括空格，但不包括换行符\n。当使用<code>.</code>后，意味着该位置一定有一个字符，无论他是什么字符。</p>
+<p>(可以连续使用..来匹配多个字符，如l..p，匹配含义字母l，然后是两个任意字符，再接着是字母p的字符串)   </p>
+<p><strong>4） 限定符“*”</strong></p>
+<p>限定符本身不代表任何字符，用来指定其前面的一个字符必须重复出现多次才能满足匹配。而星号表示匹配其前导字符的任意次数，包括0次。</p>
+<p><strong>5） 字符集匹配“[]”</strong></p>
+<p>只要某个字符串在方括号所在的位置上出现了方括号中的任意一个字符，就满足匹配规则。</p>
+<p>对于连续的数字或字母，可使用连字符-来表示一个范围。</p>
+<p>如：[a-f]表示匹配a到f中的任意一个字母</p>
+<p>[0-9]匹配任意单个数字</p>
+<p> <strong>6）字符集不匹配“[^]”</strong></p>
+<blockquote>
+<h3 id="egrep"><a href="#egrep" class="headerlink" title="egrep"></a>egrep</h3></blockquote>
+<p>(egrep命令默认使用扩展正则表达式)</p>
+<p><strong>1 ）限定符“+”</strong></p>
+<p>“+”限定前面的字符至少出现一次。</p>
+<p>#筛选以字符串“ss”开头，后面至少紧跟着1个字符“s”的文本行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#筛选以字符串“ss”开头，后面至少紧跟着1个字符“s”的文本行</span></span><br><span class="line">str=ls /etc | egrep <span class="string">"^sss+"</span></span><br><span class="line"><span class="built_in">echo</span><span class="string">"<span class="variable">$str</span>"</span></span><br></pre></td></tr></table></figure>
+<p>结果：sssd</p>
+<p> <strong>2）限定符“？”</strong></p>
+<p>限定前面的字符最多只出现一次。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#筛选以字符串“ss”开头，后面跟着0或者1个s的文本行</span></span><br><span class="line">str=ls /etc |egrep <span class="string">"^sss?"</span></span><br><span class="line"><span class="built_in">echo</span><span class="string">"<span class="variable">$str</span>"</span></span><br></pre></td></tr></table></figure>
+<p>结果：ssh,ssl,sssd</p>
+<p> <strong>3）竖线“|”和圆括号“()”</strong></p>
+<p>竖线|表示多个正则表达式之前或的关系</p>
+<p>圆括号表示一组可选值得集合。</p>
+<p>竖线和圆括号经常一起使用，表示一组可选值。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#筛选含有字符串“ssh”、“ssl”或者以字符串“yum”开头的文本行</span></span><br><span class="line">str=ls /etc |egrep <span class="string">"(ssh|ssl|^yum)"</span></span><br><span class="line"><span class="built_in">echo</span><span class="string">"<span class="variable">$str</span>"</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="读取命令行参数"><a href="#读取命令行参数" class="headerlink" title="$读取命令行参数"></a>$读取命令行参数</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#all params 全部参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$@</span></span><br><span class="line"><span class="comment">#all params  全部参数</span></span><br><span class="line"><span class="built_in">echo</span> $*</span><br><span class="line"><span class="comment">#length of params 参数的长度</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$#</span></span><br><span class="line"><span class="comment">#first param 第一个参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$1</span></span><br><span class="line"><span class="comment">#last param 最后一个参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;@:$&#123;#@&#125;</span>&#125;</span><br><span class="line"><span class="comment">#last 2 param 最后两个参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;@:$&#123;#@&#125;</span>-1&#125;</span><br><span class="line"><span class="comment">#last 2nd param 倒数第二个参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;@:$&#123;#@&#125;</span>-1:1&#125;</span><br><span class="line"><span class="comment">#from 2nd to last param 从第二个到最后一个参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;@:2&#125;</span></span><br><span class="line"><span class="comment">#from 2nd, count 2 从第2个参数开始，连续2个参数</span></span><br><span class="line"><span class="built_in">echo</span> <span class="variable">$&#123;@:2:2&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="chmod"><a href="#chmod" class="headerlink" title="chmod"></a>chmod</h3></blockquote>
+<p>chmod [可选项]  <mode>  &lt;file…&gt;</mode></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">可选项：</span><br><span class="line">  -c, --changes          like verbose but report only when a change is made (若该档案权限确实已经更改，才显示其更改动作)</span><br><span class="line">  -f, --silent, --quiet  suppress most error messages  （若该档案权限无法被更改也不要显示错误讯息）</span><br><span class="line">  -v, --verbose          output a diagnostic <span class="keyword">for</span> every file processed（显示权限变更的详细资料）</span><br><span class="line">       --no-preserve-root  <span class="keyword">do</span> not treat <span class="string">'/'</span> specially (the default)</span><br><span class="line">       --preserve-root    fail to operate recursively on <span class="string">'/'</span></span><br><span class="line">       --reference=RFILE  use RFILE‘s mode instead of MODE values</span><br><span class="line">  -R, --recursive        change files and directories recursively （以递归的方式对目前目录下的所有档案与子目录进行相同的权限变更)</span><br><span class="line">       --<span class="built_in">help</span>		显示此帮助信息</span><br><span class="line">       --version		显示版本信息</span><br><span class="line">mode ：</span><br><span class="line">权限设定字串，详细格式如下 ：</span><br><span class="line">[ugoa...][[+-=][rwxX]...][,...]，</span><br><span class="line"> </span><br><span class="line">其中</span><br><span class="line">[ugoa...]</span><br><span class="line">u 表示该档案的拥有者，g 表示与该档案的拥有者属于同一个群体(group)者，o 表示其他以外的人，a 表示所有（包含上面三者）。</span><br><span class="line">[+-=]</span><br><span class="line">+ 表示增加权限，- 表示取消权限，= 表示唯一设定权限。</span><br><span class="line">[rwxX]</span><br><span class="line">r 表示可读取，w 表示可写入，x 表示可执行，X 表示只有当该档案是个子目录或者该档案已经被设定过为可执行。</span><br><span class="line"> 	</span><br><span class="line">file...</span><br><span class="line">文件列表（单个或者多个文件、文件夹）</span><br></pre></td></tr></table></figure>
+<h4 id="数字权限使用格式"><a href="#数字权限使用格式" class="headerlink" title="数字权限使用格式"></a><strong>数字权限使用格式</strong></h4><p>在这种使用方式中，首先我们需要了解数字如何表示权限。 首先，我们规定 数字 4 、2 和 1表示读、写、执行权限（具体原因可见下节权限详解内容），即 r=4，w=2，x=1 。此时其他的权限组合也可以用其他的八进制数字表示出来，如： rwx = 4 + 2 + 1 = 7 rw = 4 + 2 = 6 rx = 4 +1 = 5 即</p>
+<p>若要同时设置 rwx (可读写运行） 权限则将该权限位 设置 为 4 + 2 + 1 = 7 若要同时设置 rw- （可读写不可运行）权限则将该权限位 设置 为 4 + 2 = 6 若要同时设置 r-x （可读可运行不可写）权限则将该权限位 设置 为 4 +1 = 5</p>
+<p>上面我们提到，每个文件都可以针对三个粒度，设置不同的rwx(读写执行)权限。即我们可以用用三个8进制数字分别表示 拥有者 、群组 、其它组( u、 g 、o)的权限详情，并用chmod直接加三个8进制数字的方式直接改变文件权限。语法格式为 ：<code>chmod &lt;abc&gt; file...</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">其中</span><br><span class="line">a,b,c各为一个数字，分别代表User、Group、及Other的权限。</span><br><span class="line">相当于简化版的</span><br><span class="line">chmod u=权限,g=权限,o=权限 file...</span><br><span class="line">而此处的权限将用8进制的数字来表示User、Group、及Other的读、写、执行权限</span><br></pre></td></tr></table></figure>
+<p>范例：</p>
+<ul>
+<li>设置所有人可以读写及执行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 777 file  (等价于  chmod u=rwx,g=rwx,o=rwx file 或  chmod a=rwx file)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>设置拥有者可读写，其他人不可读写执行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chmod 600 file (等价于  chmod u=rw,g=---,o=--- file 或 chmod u=rw,go-rwx file )</span><br></pre></td></tr></table></figure>
+<p>常见的权限表示形式有：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">-rw------- (600)      只有拥有者有读写权限。</span><br><span class="line">-rw-r--r-- (644)      只有拥有者有读写权限；而属组用户和其他用户只有读权限。</span><br><span class="line">-rwx------ (700)     只有拥有者有读、写、执行权限。</span><br><span class="line">-rwxr-xr-x (755)    拥有者有读、写、执行权限；而属组用户和其他用户只有读、执行权限。</span><br><span class="line">-rwx--x--x (711)    拥有者有读、写、执行权限；而属组用户和其他用户只有执行权限。</span><br><span class="line">-rw-rw-rw- (666)   所有用户都有文件读、写权限。</span><br><span class="line">-rwxrwxrwx (777)  所有用户都有读、写、执行权限。</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实际上，后九位每个位置的意义（代表某个属组的某个权限）都是固定的，如果我们将各个位置权限的有无用二进制数 1和 0来代替，则只读、只写、只执行权限，可以用三位二进制数表示为</span></span><br><span class="line">r-- = 100</span><br><span class="line">-w- = 010</span><br><span class="line">--x = 001</span><br><span class="line">--- = 000</span><br><span class="line"></span><br><span class="line"><span class="comment"># 实际上，我们可以将所有的权限用二进制形式表现出来，并进一步转变成八进制数字</span></span><br><span class="line">rwx = 111 = 7</span><br><span class="line">rw- = 110 = 6</span><br><span class="line">r-x = 101 = 5</span><br><span class="line">r-- = 100 = 4</span><br><span class="line">-wx = 011 = 3</span><br><span class="line">-w- = 010 = 2</span><br><span class="line">--x = 001 = 1</span><br><span class="line">--- = 000 = 0</span><br><span class="line"></span><br><span class="line">-rw------- =  600</span><br><span class="line">-rw-rw-rw- =  666</span><br><span class="line">-rwxrwxrwx = 777</span><br></pre></td></tr></table></figure>
+<p><strong>关于第一位最高位的解释</strong>： 上面我们说到了权限表示中后九位的含义，剩下的第一位代表的是文件的类型，类型可以是下面几个中的一个：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">d代表的是目录(directroy)</span><br><span class="line">-代表的是文件(regular file)</span><br><span class="line">s代表的是套字文件(socket)</span><br><span class="line">p代表的管道文件(pipe)或命名管道文件(named pipe)</span><br><span class="line">l代表的是符号链接文件(symbolic link)</span><br><span class="line">b代表的是该文件是面向块的设备文件(block-oriented device file)</span><br><span class="line">c代表的是该文件是面向字符的设备文件(charcter-oriented device file)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3></blockquote>
+<p><strong>1) sort的工作原理</strong></p>
+<p>sort将文件的每一行作为一个单位，相互比较，比较原则是从首字符向后，依次按ASCII码值进行比较，最后将他们按升序输出。</p>
+<p><strong>2) sort的-u选项</strong></p>
+<p>输出行中去除重复行。</p>
+<p><strong>3) sort的-r选项</strong> </p>
+<p>sort默认的排序方式是升序，如果想改成降序，就加个-r就搞定了。</p>
+<p><strong>4) sort的-o选项</strong></p>
+<p>由于sort默认是把结果输出到标准输出，所以需要用重定向才能将结果写入文件，形如sort filename &gt; newfile。</p>
+<p>但是，如果你想把排序结果输出到原文件中，用重定向可就不行了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ sort -r number.txt &gt; number.txt</span><br><span class="line">[rocrocket@rocrocket programming]$ cat number.txt</span><br><span class="line">[rocrocket@rocrocket programming]$</span><br></pre></td></tr></table></figure>
+<p>看，竟然将number清空了。</p>
+<p>就在这个时候，-o选项出现了，它成功的解决了这个问题，让你放心的将结果写入原文件。这或许也是-o比重定向的唯一优势所在。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ sort -r number.txt -o number.txt</span><br><span class="line">[rocrocket@rocrocket programming]$ cat number.txt</span><br><span class="line">5</span><br><span class="line">4</span><br><span class="line">3</span><br><span class="line">2</span><br><span class="line">1</span><br></pre></td></tr></table></figure>
+<p><strong>5) sort的-n选项</strong></p>
+<p>你有没有遇到过10比2小的情况。我反正遇到过。出现这种情况是由于排序程序将这些数字按字符来排序了，排序程序会先比较1和2，显然1小，所以就将10放在2前面喽。这也是sort的一贯作风。</p>
+<p>我们如果想改变这种现状，就要使用-n选项，来告诉sort，“要以数值来排序”！</p>
+<p><strong>6) sort的-t选项和-k选项</strong></p>
+<p>如果有一个文件的内容是这样：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ cat facebook.txt</span><br><span class="line">banana:30:5.5</span><br><span class="line">apple:10:2.5</span><br><span class="line">pear:90:2.3</span><br><span class="line">orange:20:3.4</span><br></pre></td></tr></table></figure>
+<p>这个文件有三列，列与列之间用冒号隔开了，第一列表示水果类型，第二列表示水果数量，第三列表示水果价格。</p>
+<p>那么我想以水果数量来排序，也就是以第二列来排序，如何利用sort实现？</p>
+<p>幸好，sort提供了-t选项，后面可以设定间隔符。（是不是想起了cut和paste的-d选项，共鸣～～）</p>
+<p>指定了间隔符之后，就可以用-k来指定列数了。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[rocrocket@rocrocket programming]$ sort -n -k 2 -t : facebook.txt</span><br><span class="line">apple:10:2.5</span><br><span class="line">orange:20:3.4</span><br><span class="line">banana:30:5.5</span><br><span class="line">pear:90:2.3</span><br></pre></td></tr></table></figure>
+<p>我们使用冒号作为间隔符，并针对第二列来进行数值升序排序，结果很令人满意。</p>
+<blockquote>
+<h3 id="uniq"><a href="#uniq" class="headerlink" title="uniq"></a>uniq</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用法：uniq [选项]... [文件]  </span><br><span class="line">从输入文件或者标准输入中筛选相邻的匹配行并写入到输出文件或标准输出。  </span><br><span class="line">不附加任何选项时匹配行将在首次出现处被合并。   </span><br><span class="line">长选项必须使用的参数对于短选项时也是必需使用的。  </span><br><span class="line"> -c, --count              //在每行前加上表示相应行目出现次数的前缀编号  </span><br><span class="line"> -d, --repeated          //只输出重复的行  </span><br><span class="line"> -D, --all-repeated      //只输出重复的行，不过有几行输出几行  </span><br><span class="line"> -f, --skip-fields=N     //-f 忽略的段数，-f 1 忽略第一段  </span><br><span class="line"> -i, --ignore-case       //不区分大小写  </span><br><span class="line"> -s, --skip-chars=N      //根-f有点像，不过-s是忽略，后面多少个字符 -s 5就忽略后面5个字符  </span><br><span class="line"> -u, --unique            //去除重复的后，全部显示出来，根mysql的distinct功能上有点像  </span><br><span class="line"> -z, --zero-terminated   end lines with 0 byte, not newline  </span><br><span class="line"> -w, --check-chars=N      //对每行第N 个字符以后的内容不作对照  </span><br><span class="line"> --<span class="built_in">help</span>              //显示此帮助信息并退出  </span><br><span class="line"> --version              //显示版本信息并退出</span><br></pre></td></tr></table></figure>
+<hr>
+<h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://blog.csdn.net/xluren/article/details/17489667" target="_blank" rel="noopener">shell getopts 用法</a></p>
+<p><a href="http://roclinux.cn/?p=1350" target="_blank" rel="noopener">《sort帮你排序》-linux命令五分钟系列之二十六 作者 roc)</a></p>
+<p><a href="https://blog.csdn.net/u013197629/article/details/73608613" target="_blank" rel="noopener">Linux权限详解（chmod、600、644、666、700、711、755、777、4755、6755、7755）</a></p>
+<p><a href="https://blog.csdn.net/qq504196282/article/details/52995198" target="_blank" rel="noopener">shell之正则表达式</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/shell/" rel="tag"># shell</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/09/07/CPH购买前往Karlskrona的火车票/" rel="next" title="【教程】CPH机场购买前往Karlskrona的火车票">
+                <i class="fa fa-chevron-left"></i> 【教程】CPH机场购买前往Karlskrona的火车票
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/head.jpg"
+                alt="Jesse Zheng" />
+            
+              <p class="site-author-name" itemprop="name">Jesse Zheng</p>
+              <p class="site-description motion-element" itemprop="description">Passion makes perfect.</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">18</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/JesseZheng" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/1799812841" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="mailto:jessezheng7887@gmail.com" target="_blank" title="E-Mail">
+                      
+                        <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://instagram.com/jessezheng97" target="_blank" title="Instagram">
+                      
+                        <i class="fa fa-fw fa-instagram"></i>Instagram</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=471403427&auto=0&height=66"></iframe>
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#getopts"><span class="nav-number">1.</span> <span class="nav-text">getopts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">2.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#egrep"><span class="nav-number">3.</span> <span class="nav-text">egrep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读取命令行参数"><span class="nav-number">4.</span> <span class="nav-text">$读取命令行参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">5.</span> <span class="nav-text">chmod</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字权限使用格式"><span class="nav-number">5.1.</span> <span class="nav-text">数字权限使用格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">6.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniq"><span class="nav-number">7.</span> <span class="nav-text">uniq</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">8.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Jesse Zheng</span>
+
+  
+</div>
+
+
+  <div class="powered-by">
+  <i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+    本站访客数:<span id="busuanzi_value_site_uv"></span>
+  </span>
+  </div> 
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+
+</body>
+</html>
