@@ -107,18 +107,18 @@
 
 
 
-<meta name="description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq">
+<meta name="description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq wc  cut">
 <meta name="keywords" content="shell">
 <meta property="og:type" content="article">
 <meta property="og:title" content="shell命令自查">
 <meta property="og:url" content="http://yoursite.com/2018/09/13/shell命令自查/index.html">
 <meta property="og:site_name" content="J.Z&#39;s BLOG">
-<meta property="og:description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq">
+<meta property="og:description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq wc  cut">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-09-13T18:42:29.295Z">
+<meta property="og:updated_time" content="2018-11-03T14:22:28.135Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="shell命令自查">
-<meta name="twitter:description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq">
+<meta name="twitter:description" content="getopts grep &amp;amp;&amp;amp; egrep $读取命令行参数 chmod sort uniq wc  cut">
 
 
 
@@ -420,6 +420,8 @@
 <li>chmod</li>
 <li>sort</li>
 <li>uniq</li>
+<li>wc </li>
+<li>cut</li>
 </ul>
 <a id="more"></a>
 <blockquote>
@@ -542,6 +544,35 @@
 <blockquote>
 <h3 id="uniq"><a href="#uniq" class="headerlink" title="uniq"></a>uniq</h3></blockquote>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">用法：uniq [选项]... [文件]  </span><br><span class="line">从输入文件或者标准输入中筛选相邻的匹配行并写入到输出文件或标准输出。  </span><br><span class="line">不附加任何选项时匹配行将在首次出现处被合并。   </span><br><span class="line">长选项必须使用的参数对于短选项时也是必需使用的。  </span><br><span class="line"> -c, --count              //在每行前加上表示相应行目出现次数的前缀编号  </span><br><span class="line"> -d, --repeated          //只输出重复的行  </span><br><span class="line"> -D, --all-repeated      //只输出重复的行，不过有几行输出几行  </span><br><span class="line"> -f, --skip-fields=N     //-f 忽略的段数，-f 1 忽略第一段  </span><br><span class="line"> -i, --ignore-case       //不区分大小写  </span><br><span class="line"> -s, --skip-chars=N      //根-f有点像，不过-s是忽略，后面多少个字符 -s 5就忽略后面5个字符  </span><br><span class="line"> -u, --unique            //去除重复的后，全部显示出来，根mysql的distinct功能上有点像  </span><br><span class="line"> -z, --zero-terminated   end lines with 0 byte, not newline  </span><br><span class="line"> -w, --check-chars=N      //对每行第N 个字符以后的内容不作对照  </span><br><span class="line"> --<span class="built_in">help</span>              //显示此帮助信息并退出  </span><br><span class="line"> --version              //显示版本信息并退出</span><br></pre></td></tr></table></figure>
+<blockquote>
+<h3 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wc [-clw][--<span class="built_in">help</span>][--version][文件...]</span><br></pre></td></tr></table></figure>
+<ul>
+<li>-c或–bytes或–chars 只显示Bytes数。</li>
+<li>-l或–lines 只显示行数。</li>
+<li>-w或–words 只显示字数。</li>
+<li>–help 在线帮助。</li>
+<li>–version 显示版本信息。</li>
+</ul>
+<blockquote>
+<h3 id="cut"><a href="#cut" class="headerlink" title="cut"></a>cut</h3></blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cut -c -b -f -d -s</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>-c character</p>
+</li>
+<li><p>-b byte</p>
+</li>
+<li><p>-f field</p>
+</li>
+<li><p>-d delimiter分隔符</p>
+</li>
+<li><p>　-c 和 -f 参数可以跟以下子参数：</p>
+<p>　　<strong>N 第N个字符或字段</strong></p>
+<p>　　<strong>N- 从第一个字符或字段到文件结束</strong></p>
+<p>　　<strong>N-M 从第N个到第M个字符或字段</strong></p>
+<p>　　<strong>-M 从第一个到第N个字符或字段</strong> </p>
+</li>
+</ul>
 <hr>
 <h3 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h3><p><a href="https://blog.csdn.net/xluren/article/details/17489667" target="_blank" rel="noopener">shell getopts 用法</a></p>
 <p><a href="http://roclinux.cn/?p=1350" target="_blank" rel="noopener">《sort帮你排序》-linux命令五分钟系列之二十六 作者 roc)</a></p>
@@ -755,7 +786,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#getopts"><span class="nav-number">1.</span> <span class="nav-text">getopts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">2.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#egrep"><span class="nav-number">3.</span> <span class="nav-text">egrep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读取命令行参数"><span class="nav-number">4.</span> <span class="nav-text">$读取命令行参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">5.</span> <span class="nav-text">chmod</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字权限使用格式"><span class="nav-number">5.1.</span> <span class="nav-text">数字权限使用格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">6.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniq"><span class="nav-number">7.</span> <span class="nav-text">uniq</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">8.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#getopts"><span class="nav-number">1.</span> <span class="nav-text">getopts</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#grep"><span class="nav-number">2.</span> <span class="nav-text">grep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#egrep"><span class="nav-number">3.</span> <span class="nav-text">egrep</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#读取命令行参数"><span class="nav-number">4.</span> <span class="nav-text">$读取命令行参数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chmod"><span class="nav-number">5.</span> <span class="nav-text">chmod</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#数字权限使用格式"><span class="nav-number">5.1.</span> <span class="nav-text">数字权限使用格式</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#sort"><span class="nav-number">6.</span> <span class="nav-text">sort</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#uniq"><span class="nav-number">7.</span> <span class="nav-text">uniq</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#wc"><span class="nav-number">8.</span> <span class="nav-text">wc</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#cut"><span class="nav-number">9.</span> <span class="nav-text">cut</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#参考资料"><span class="nav-number">10.</span> <span class="nav-text">参考资料</span></a></li></ol></div>
             
 
           </div>
