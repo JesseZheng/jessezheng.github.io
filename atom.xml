@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-11-03T14:22:28.135Z</updated>
+  <updated>2018-11-09T19:33:21.237Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Simple HTTP webserver</title>
+    <link href="http://yoursite.com/2018/11/04/Simple-HTTP-webserver/"/>
+    <id>http://yoursite.com/2018/11/04/Simple-HTTP-webserver/</id>
+    <published>2018-11-04T13:54:41.000Z</published>
+    <updated>2018-11-09T19:33:21.237Z</updated>
+    
+    <content type="html"><![CDATA[<p>Github: <a href="https://github.com/JesseZheng/TinyServer" target="_blank" rel="noopener">TinyServer</a></p><a id="more"></a><h2 id="Socket"><a href="#Socket" class="headerlink" title="Socket"></a>Socket</h2><h2 id="Bind"><a href="#Bind" class="headerlink" title="Bind"></a>Bind</h2><h2 id="Listen"><a href="#Listen" class="headerlink" title="Listen"></a>Listen</h2><h2 id="Accept"><a href="#Accept" class="headerlink" title="Accept"></a>Accept</h2><h2 id="Fork"><a href="#Fork" class="headerlink" title="Fork"></a>Fork</h2><h2 id="Deamon-process"><a href="#Deamon-process" class="headerlink" title="Deamon process"></a>Deamon process</h2><hr><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p> <a href="https://www.cnblogs.com/skynet/archive/2010/12/12/1903949.html" target="_blank" rel="noopener">Linux Socket编程</a></p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Github: &lt;a href=&quot;https://github.com/JesseZheng/TinyServer&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;TinyServer&lt;/a&gt;&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
+    
+    
+      <category term="http-webserver" scheme="http://yoursite.com/tags/http-webserver/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+  </entry>
   
   <entry>
     <title>shell命令自查</title>
@@ -362,9 +386,9 @@
       <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
       <category term="Anaconda" scheme="http://yoursite.com/tags/Anaconda/"/>
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
