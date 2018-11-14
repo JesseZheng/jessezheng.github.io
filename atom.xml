@@ -34,9 +34,9 @@
       <category term="学习" scheme="http://yoursite.com/categories/%E5%AD%A6%E4%B9%A0/"/>
     
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
       <category term="http-webserver" scheme="http://yoursite.com/tags/http-webserver/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
     
   </entry>
   
