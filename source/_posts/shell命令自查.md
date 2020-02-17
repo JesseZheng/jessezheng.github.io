@@ -13,6 +13,8 @@ categories:
 - chmod
 - sort
 - uniq
+- wc 
+- cut
 
 <!-- more -->
 
@@ -405,7 +407,41 @@ pear:90:2.3
  --version              //显示版本信息并退出 
 ```
 
+> ### wc
 
+```bash
+wc [-clw][--help][--version][文件...]
+```
+
+- -c或--bytes或--chars 只显示Bytes数。
+- -l或--lines 只显示行数。
+- -w或--words 只显示字数。
+- --help 在线帮助。
+- --version 显示版本信息。
+
+> ### cut
+
+```bash
+cut -c -b -f -d -s
+```
+
+- -c character
+
+- -b byte
+
+- -f field
+
+- -d delimiter分隔符
+
+- 　-c 和 -f 参数可以跟以下子参数：
+
+  　　**N 第N个字符或字段**
+
+  　　**N- 从第一个字符或字段到文件结束**
+
+  　　**N-M 从第N个到第M个字符或字段**
+
+  　　**-M 从第一个到第N个字符或字段** 
 
 ----------
 

@@ -135,7 +135,7 @@ social:
   #FB Page: https://www.facebook.com/yourname || facebook
   #VK Group: https://vk.com/yourname || vk
   #StackOverflow: https://stackoverflow.com/yourname || stack-overflow
-  #YouTube: https://youtube.com/yourname || youtube
+  YouTube: https://www.youtube.com/channel/UChR20LkwineW9LTy0PGjPtg/ || youtube
   Instagram: https://instagram.com/jessezheng97 || instagram
   #Skype: skype:yourname?call|chat || skype
 
@@ -307,7 +307,7 @@ font:
   # Global font settings used on <body> element.
   global:
     external: true
-    family: Galdeano
+    family: Lato #Galdeano
     size:
 
   # Font settings for Headlines (h1, h2, h3, h4, h5, h6).
@@ -327,13 +327,13 @@ font:
   # Fallback to `global` font settings.
   logo:
     external: true
-    family:
+    family: Galdeano
     size:
 
   # Font settings for <code> and code blocks.
   codes:
     external: true
-    family:
+    family: Console
     size:
 
 
@@ -696,7 +696,7 @@ pace: false
 pace_theme: pace-theme-minimal
 
 # Canvas-nest
-canvas_nest: true
+canvas_nest: false
 
 # three_waves
 three_waves: false

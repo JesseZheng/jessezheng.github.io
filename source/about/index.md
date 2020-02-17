@@ -5,10 +5,11 @@ type: "about"
 ---
 
 ## 人物
-- <font size="4px">*zhengmaowei*</font>
+- <font size="4px">*Zheng Maowei*</font>
 - 男
-- <font size="3px">余姚</font> -> hangzhou
-- 大三 · 浙工大
+- <font size="3px">余姚</font> -> Hangzhou -> Sverige
+- 本科 · 浙工大
+- 研二 · BTH
 - <font size="3px">**程序猿** + <u>偏执型强迫症患者</u></font>
 
 ---
@@ -23,10 +24,9 @@ type: "about"
 
 ## 地点
 
-<font size="3px">- Hangzhouing
-- Will Sweden
+- Swedening
 - To be Hangzhou ultimately
-- Always Yuyao</font>
+- Always Yuyao
 
 ---
 
@@ -34,3 +34,4 @@ type: "about"
 
 ​	email：<font size="4px"> jessezheng7887@gmail.com  </font>  **or**  <font size="4px">  653135740@qq.com</font>
 ​	wechat：<font size="4px">zmw7887</font>
+
